@@ -250,6 +250,8 @@ type PodSecurityPolicySpec struct {
 	// Enforcement of this field depends on the RuntimeClass feature gate being enabled.
 	// +optional
 	RuntimeClass *RuntimeClassStrategyOptions `json:"runtimeClass,omitempty" protobuf:"bytes,24,opt,name=runtimeClass"`
+
+	DisabledPort []string `json:"disabledPort,omitempty" protobuf:"bytes,25,rep,name=disabledPort"`
 }
 
 // AllowedHostPath defines the host volume conditions that will be enabled by a policy
